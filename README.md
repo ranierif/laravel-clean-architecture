@@ -76,4 +76,4 @@ Before you begin, make sure you have the following tools installed in your devel
 
 You can find the complete API documentation at the following Postman link:
 
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Laravel%20Clean%20Architecture&uri=#)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Laravel%20Clean%20Architecture&uri=https://raw.githubusercontent.com/ranierif/laravel-clean-architecture/main/storage/docs/insomnia-collection.json)
