@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Helpers;
 
-use App\Domain\Helpers\CryptographyInterface;
+use App\Application\Helpers\CryptographyInterface;
 use Illuminate\Support\Facades\Hash;
 
 class Cryptography implements CryptographyInterface

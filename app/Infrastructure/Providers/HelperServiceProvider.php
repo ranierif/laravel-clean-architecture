@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\Providers;
 
+use App\Application\Helpers\CryptographyInterface;
 use App\Application\Helpers\UuidGeneratorInterface;
-use App\Domain\Helpers\CryptographyInterface;
 use App\Infrastructure\Helpers\Cryptography;
 use App\Infrastructure\Helpers\UuidGenerator;
 use Illuminate\Support\ServiceProvider;
