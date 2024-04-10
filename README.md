@@ -2,12 +2,15 @@
 
 This is an example of a project that applies Clean Architecture using the Laravel framework version 10.
 
-## Features
+## Stacks
 
-- Rest API
-- Produce and Consume messages with Kafka
+> - PHP 8.2
+> - Laravel 10
+> - Nginx
+> - MySQL 8
+> - Kafka
 
-## The idea (simulation)
+## The main Features
 
 > - User registration
 > - Authentication of user
