@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Helpers;
 
-use App\Application\Helpers\CryptographyInterface;
+use App\Domain\Shared\Helper\CryptographyInterface;
 use Illuminate\Support\Facades\Hash;
 
 class Cryptography implements CryptographyInterface

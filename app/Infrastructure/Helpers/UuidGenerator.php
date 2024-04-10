@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Helpers;
 
-use App\Application\Helpers\UuidGeneratorInterface;
+use App\Domain\Shared\Helper\UuidGeneratorInterface;
 use Illuminate\Support\Str;
 
 class UuidGenerator implements UuidGeneratorInterface

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Http\Controllers\User;
 
-use App\Application\DTO\User\GetUserInputDTO;
-use App\Application\UseCases\User\GetUserUseCase;
+use App\Application\User\Get\GetUserInputDTO;
+use App\Application\User\Get\GetUserUseCase;
 use App\Domain\Shared\Enum\HttpCode;
 use App\Infrastructure\Exceptions\HttpException;
 use App\Infrastructure\Helpers\BaseResponse;

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Http\Controllers\Cart;
 
-use App\Application\DTO\Cart\CreateCartInputDTO;
-use App\Application\UseCases\Cart\CreateCartUseCase;
+use App\Application\Cart\Create\CreateCartInputDTO;
+use App\Application\Cart\Create\CreateCartUseCase;
 use App\Domain\Shared\Enum\HttpCode;
 use App\Infrastructure\Exceptions\HttpException;
 use App\Infrastructure\Helpers\BaseResponse;

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Broker\Consumers\Kafka;
 
-use App\Application\DTO\Payment\PaymentStatusChangeInputDTO;
-use App\Application\UseCases\Payment\PaymentStatusChangeUseCase;
+use App\Application\Payment\StatusChange\PaymentStatusChangeInputDTO;
+use App\Application\Payment\StatusChange\PaymentStatusChangeUseCase;
 use App\Domain\Shared\Service\LoggerInterface;
 use App\Infrastructure\Broker\TopicEnum;
 use Illuminate\Support\Arr;

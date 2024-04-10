@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Domain\Shared\Entity;
 
-use App\Application\Helpers\StrHelper;
+use App\Domain\Shared\Helper\StrHelper;
 use Carbon\Carbon;
 
 abstract class EntityAbstract implements EntityInterface

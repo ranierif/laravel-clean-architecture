@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Providers;
 
-use App\Application\Broker\Producer\PaymentCartProducerInterface;
+use App\Application\Cart\Pay\PaymentCartProducerInterface;
 use App\Infrastructure\Broker\Producers\Kafka\PaymentCartProducer;
 use Illuminate\Support\ServiceProvider;
 

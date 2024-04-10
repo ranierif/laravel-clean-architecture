@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Http\Middleware;
 
-use App\Application\UseCases\Auth\CheckAuthenticationUseCase;
+use App\Application\User\CheckAuthentication\CheckAuthenticationUseCase;
 use Closure;
 use Illuminate\Http\Request;
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Repositories;
 
-use App\Application\Exceptions\BusinessException;
+use App\Application\Shared\Exception\BusinessException;
 use App\Domain\Shared\Entity\EntityInterface;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

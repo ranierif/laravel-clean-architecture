@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Http\Controllers\Auth;
 
-use App\Application\DTO\Auth\LoginInputDTO;
-use App\Application\UseCases\Auth\LoginUseCase;
+use App\Application\User\Login\LoginInputDTO;
+use App\Application\User\Login\LoginUseCase;
 use App\Domain\Shared\Enum\HttpCode;
 use App\Infrastructure\Exceptions\HttpException;
 use App\Infrastructure\Helpers\BaseResponse;

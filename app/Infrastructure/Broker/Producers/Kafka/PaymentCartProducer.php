@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Broker\Producers\Kafka;
 
-use App\Application\Broker\Producer\PaymentCartProducerInterface;
+use App\Application\Cart\Pay\PaymentCartProducerInterface;
 use App\Infrastructure\Broker\TopicEnum;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
