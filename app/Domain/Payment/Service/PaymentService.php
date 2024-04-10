@@ -11,7 +11,6 @@ use App\Domain\Payment\Exception\PaymentNotFoundException;
 use App\Domain\Payment\Exception\PaymentNotUpdatedException;
 use App\Domain\Payment\Exception\PaymentUnableToReceiveException;
 use App\Domain\Payment\Repository\PaymentRepositoryInterface;
-use Illuminate\Support\Arr;
 
 class PaymentService
 {
@@ -23,12 +22,12 @@ class PaymentService
     public function sanitize(array $data): array
     {
         return [
-            'id' => Arr::get($data, 'id'),
-            'uuid' => Arr::get($data, 'uuid'),
-            'user_id' => Arr::get($data, 'user_id'),
-            'cart_uuid' => Arr::get($data, 'cart_uuid'),
-            'method' => Arr::get($data, 'method'),
-            'status' => Arr::get($data, 'status'),
+            'id' => $data['id'] ?? null,
+            'uuid' => $data['uuid'] ?? null,
+            'user_id' => $data['user_id'] ?? null,
+            'cart_uuid' => $data['cart_uuid'] ?? null,
+            'method' => $data['method'] ?? null,
+            'status' => $data['status'] ?? null,
         ];
     }
 

@@ -8,7 +8,6 @@ use App\Domain\Cart\Entity\CartEntity;
 use App\Domain\Cart\Exception\CartNotCreatedException;
 use App\Domain\Cart\Exception\CartNotFoundException;
 use App\Domain\Cart\Repository\CartRepositoryInterface;
-use Illuminate\Support\Arr;
 
 class CartService
 {
@@ -20,11 +19,11 @@ class CartService
     public function sanitize(array $data): array
     {
         return [
-            'id' => Arr::get($data, 'id'),
-            'uuid' => Arr::get($data, 'uuid'),
-            'user_id' => Arr::get($data, 'user_id'),
-            'items' => Arr::get($data, 'items', []),
-            'status' => Arr::get($data, 'status'),
+            'id' => $data['id'] ?? null,
+            'uuid' => $data['uuid'] ?? null,
+            'user_id' => $data['user_id'] ?? null,
+            'items' => $data['items'] ?? [],
+            'status' => $data['status'] ?? null,
         ];
     }
 

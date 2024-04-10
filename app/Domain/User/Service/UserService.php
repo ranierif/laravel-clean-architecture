@@ -9,7 +9,6 @@ use App\Domain\User\Exception\EmailAlreadyInUseException;
 use App\Domain\User\Exception\UserNotCreatedException;
 use App\Domain\User\Exception\UserNotFoundException;
 use App\Domain\User\Repository\UserRepositoryInterface;
-use Illuminate\Support\Arr;
 
 class UserService
 {
@@ -21,11 +20,11 @@ class UserService
     public function sanitize(array $data): array
     {
         return [
-            'id' => Arr::get($data, 'id'),
-            'name' => Arr::get($data, 'name'),
-            'email' => Arr::get($data, 'email'),
-            'phone_number' => Arr::get($data, 'phone_number'),
-            'password' => Arr::get($data, 'password'),
+            'id' => $data['id'] ?? null,
+            'name' => $data['name'] ?? null,
+            'email' => $data['email'] ?? null,
+            'phone_number' => $data['phone_number'] ?? null,
+            'password' => $data['password'] ?? null,
         ];
     }
 
