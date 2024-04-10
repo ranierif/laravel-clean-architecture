@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Infrastructure\Broker\Producers\Kafka;
 
 use App\Application\Broker\Producer\PaymentCartProducerInterface;

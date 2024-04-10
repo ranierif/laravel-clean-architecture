@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Infrastructure\Exceptions;
 
 use App\Domain\Enums\HttpCode;
@@ -17,8 +19,11 @@ class Handler extends ExceptionHandler
 
     public function register(): void
     {
-        $this->reportable(function (Throwable $e) {
-        });
+        $this->reportable(
+            function (Throwable $exception) {
+                //
+            }
+        );
     }
 
     public function render($request, Throwable $exception)

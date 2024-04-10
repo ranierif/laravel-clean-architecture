@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Infrastructure\Broker\Consumers\Kafka;
 
 use App\Application\DTO\Payment\PaymentStatusChangeInputDTO;
