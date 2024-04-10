@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "prepare": "husky install",
+        "commit": "cz"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^18.4.2",
+        "@commitlint/config-conventional": "^18.4.2",
+        "axios": "^1.6.1",
+        "commitizen": "^4.3.0",
+        "husky": "^8.0.0",
+        "laravel-vite-plugin": "^0.8.0",
+        "vite": "^4.0.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}

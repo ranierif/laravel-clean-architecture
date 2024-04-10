@@ -1,0 +1,122 @@
+version: '3.7'
+
+services:
+  nginx:
+    container_name: laravel-clean-architecture_nginx
+    image: nginx:1.23.3-alpine
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx:/etc/nginx/conf.d
+    ports:
+      - "80:80"
+    depends_on:
+      - php
+    networks:
+      - laravel-clean-architecture-network
+
+  php:
+    container_name: laravel-clean-architecture_php
+    build:
+      args:
+        user: ${HOST_USER}
+        uid: ${HOST_UID}
+      context: ./docker
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www
+    working_dir: /var/www
+    environment:
+      XDEBUG_CONFIG: 'client_host=${XDEBUG_CLIENT_HOST} client_port=${XDEBUG_CLIENT_PORT}'
+      XDEBUG_MODE: '${XDEBUG_MODE:-off}'
+      PHP_IDE_CONFIG: 'serverName=${PHP_IDE_SERVER_NAME}'
+      DB_PORT: ${DB_PORT}
+      DB_HOST: ${DB_HOST}
+    depends_on:
+      - mysql
+    networks:
+      - laravel-clean-architecture-network
+
+  mysql:
+    container_name: laravel-clean-architecture_mysql
+    image: mysql:8.0.32
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./storage/docker/mysql:/var/lib/mysql
+    ports:
+      - "${DB_PORT}:3306"
+    networks:
+      - laravel-clean-architecture-network
+
+  zookeeper:
+    container_name: laravel-clean-architecture_zookeeper
+    image: 'bitnami/zookeeper:latest'
+    restart: always
+    ports:
+      - '2181:2181'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+      - ZOOKEEPER_CLIENT_PORT=2181
+      - ZOOKEEPER_TICK_TIME=2000
+      - JVM_OPTS=-Xms32M -XX:MaxRAM=860M
+    volumes:
+      - zookeeper:/data
+      - zookeeper:/datalog
+    networks:
+      - laravel-clean-architecture-network
+
+  kafka:
+    container_name: laravel-clean-architecture_kafka
+    image: 'bitnami/kafka:2.8.1-debian-10-r18'
+    restart: always
+    ports:
+      - '9092:9092'
+      - '9093:9093'
+    depends_on:
+      - zookeeper
+    environment:
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_BROKER_ID=1
+      - KAFKA_LOG_RETENTION_HOURS=2160
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_LISTENERS=INTERNAL://kafka:9092,EXTERNAL://kafka:9093
+      - KAFKA_ADVERTISED_LISTENERS=INTERNAL://kafka:9092,EXTERNAL://kafka:9093
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+      - KAFKA_INTER_BROKER_LISTENER_NAME=INTERNAL
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_LOG4J_LOGGERS='kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO'
+      - JVM_OPTS=-Xms32M -XX:MaxRAM=860M
+    volumes:
+      - kafka:/var/lib/kafka/data
+    networks:
+      - laravel-clean-architecture-network
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: laravel-clean-architecture_kafka-ui
+    ports:
+      - "8580:8080"
+    restart: always
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=LOCAL
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+    networks:
+      - laravel-clean-architecture-network
+
+networks:
+  laravel-clean-architecture-network:
+    driver: bridge
+
+volumes:
+  mysql:
+    driver: local
+  zookeeper:
+    driver: local
+  kafka:
+    driver: local

@@ -1,0 +1,16 @@
+.git
+.idea
+.env
+node_modules
+vendor
+storage/framework/cache/**
+storage/framework/sessions/**
+storage/framework/views/**
+docker-compose.yml
+docker-compose.yml
+docker-compose-prod.yml
+Dockerfile
+Dockerfile
+Dockerfile.prod
+composer.lock
+package-lock.json
