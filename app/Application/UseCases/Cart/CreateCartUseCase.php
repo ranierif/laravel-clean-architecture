@@ -9,6 +9,7 @@ use App\Application\DTO\Cart\CreateCartOutputDTO;
 use App\Application\Helpers\UuidGeneratorInterface;
 use App\Domain\Entities\CartEntity;
 use App\Domain\Enums\CartStatusEnum;
+use App\Domain\Exceptions\Cart\CartNotCreatedException;
 use App\Domain\Services\CartService;
 use App\Domain\Services\LoggerInterface;
 use Throwable;
@@ -22,6 +23,10 @@ class CreateCartUseCase
     ) {
     }
 
+    /**
+     * @throws CartNotCreatedException
+     * @throws Throwable
+     */
     public function execute(CreateCartInputDTO $input): CreateCartOutputDTO
     {
         try {

@@ -6,6 +6,7 @@ namespace App\Application\UseCases\Cart;
 
 use App\Application\DTO\Cart\GetCartInputDTO;
 use App\Application\DTO\Cart\GetCartOutputDTO;
+use App\Domain\Exceptions\Cart\CartNotFoundException;
 use App\Domain\Services\CartService;
 use App\Domain\Services\LoggerInterface;
 use Throwable;
@@ -18,6 +19,10 @@ class GetCartUseCase
     ) {
     }
 
+    /**
+     * @throws Throwable
+     * @throws CartNotFoundException
+     */
     public function execute(GetCartInputDTO $input): GetCartOutputDTO
     {
         try {

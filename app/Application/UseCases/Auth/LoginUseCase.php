@@ -16,9 +16,6 @@ class LoginUseCase
     ) {
     }
 
-    /**
-     * @throws BusinessException
-     */
     public function execute(LoginInputDTO $input): LoginOutputDTO
     {
         $email = $input->email;
@@ -31,6 +28,9 @@ class LoginUseCase
         return new LoginOutputDTO(['token' => $token]);
     }
 
+    /**
+     * @throws BusinessException
+     */
     protected function validateCredentials(string $email, string $password): void
     {
         $credentials = [

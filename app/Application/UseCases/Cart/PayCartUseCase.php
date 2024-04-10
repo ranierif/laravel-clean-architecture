@@ -11,6 +11,9 @@ use App\Application\DTO\Payment\PaymentCreatedMessageDTO;
 use App\Application\Helpers\UuidGeneratorInterface;
 use App\Domain\Entities\PaymentEntity;
 use App\Domain\Enums\PaymentStatusEnum;
+use App\Domain\Exceptions\Cart\CartNotFoundException;
+use App\Domain\Exceptions\Payment\PaymentNotCreatedException;
+use App\Domain\Exceptions\Payment\PaymentUnableToReceiveException;
 use App\Domain\Helpers\CryptographyInterface;
 use App\Domain\Services\CartService;
 use App\Domain\Services\LoggerInterface;
@@ -29,6 +32,12 @@ class PayCartUseCase
     ) {
     }
 
+    /**
+     * @throws PaymentUnableToReceiveException
+     * @throws PaymentNotCreatedException
+     * @throws Throwable
+     * @throws CartNotFoundException
+     */
     public function execute(PayCartInputDTO $input): PayCartOutputDTO
     {
         try {

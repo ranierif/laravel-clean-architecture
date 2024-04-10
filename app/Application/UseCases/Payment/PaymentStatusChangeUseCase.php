@@ -4,6 +4,8 @@ namespace App\Application\UseCases\Payment;
 
 use App\Application\DTO\Payment\PaymentStatusChangeInputDTO;
 use App\Domain\Enums\PaymentStatusEnum;
+use App\Domain\Exceptions\Payment\PaymentNotFoundException;
+use App\Domain\Exceptions\Payment\PaymentNotUpdatedException;
 use App\Domain\Services\LoggerInterface;
 use App\Domain\Services\PaymentService;
 use Throwable;
@@ -16,6 +18,11 @@ class PaymentStatusChangeUseCase
     ) {
     }
 
+    /**
+     * @throws PaymentNotUpdatedException
+     * @throws PaymentNotFoundException
+     * @throws Throwable
+     */
     public function execute(PaymentStatusChangeInputDTO $input): void
     {
         try {

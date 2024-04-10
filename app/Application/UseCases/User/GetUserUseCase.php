@@ -4,6 +4,7 @@ namespace App\Application\UseCases\User;
 
 use App\Application\DTO\User\GetUserInputDTO;
 use App\Application\DTO\User\GetUserOutputDTO;
+use App\Domain\Exceptions\User\UserNotFoundException;
 use App\Domain\Services\LoggerInterface;
 use App\Domain\Services\UserService;
 use Throwable;
@@ -16,6 +17,10 @@ class GetUserUseCase
     ) {
     }
 
+    /**
+     * @throws Throwable
+     * @throws UserNotFoundException
+     */
     public function execute(GetUserInputDTO $input): GetUserOutputDTO
     {
         try {

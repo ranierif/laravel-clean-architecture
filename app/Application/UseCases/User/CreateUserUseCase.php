@@ -6,6 +6,8 @@ namespace App\Application\UseCases\User;
 
 use App\Application\DTO\User\CreateUserInputDTO;
 use App\Domain\Entities\UserEntity;
+use App\Domain\Exceptions\User\EmailAlreadyInUseException;
+use App\Domain\Exceptions\User\UserNotCreatedException;
 use App\Domain\Services\LoggerInterface;
 use App\Domain\Services\UserService;
 use Throwable;
@@ -18,6 +20,11 @@ class CreateUserUseCase
     ) {
     }
 
+    /**
+     * @throws UserNotCreatedException
+     * @throws Throwable
+     * @throws EmailAlreadyInUseException
+     */
     public function execute(CreateUserInputDTO $input): void
     {
         try {
