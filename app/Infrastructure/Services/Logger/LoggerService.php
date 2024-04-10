@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Services\Logger;
 
-use App\Domain\Services\LoggerInterface;
+use App\Domain\Shared\Service\LoggerInterface;
 use Illuminate\Support\Facades\Log;
 
 class LoggerService implements LoggerInterface

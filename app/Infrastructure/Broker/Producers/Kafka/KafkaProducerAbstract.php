@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Broker\Producers\Kafka;
 
-use App\Domain\Services\LoggerInterface;
+use App\Domain\Shared\Service\LoggerInterface;
 use App\Infrastructure\Broker\TopicEnum;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;

@@ -8,7 +8,7 @@ use App\Application\DTO\Auth\LoginInputDTO;
 use App\Application\DTO\Auth\LoginOutputDTO;
 use App\Application\Exceptions\BusinessException;
 use App\Application\UseCases\Auth\LoginUseCase;
-use App\Domain\Services\AuthServiceInterface;
+use App\Domain\User\Service\AuthServiceInterface;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
 

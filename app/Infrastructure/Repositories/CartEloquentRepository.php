@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\Repositories;
 
-use App\Domain\Entities\CartEntity;
-use App\Domain\Repositories\CartRepositoryInterface;
+use App\Domain\Cart\Entity\CartEntity;
+use App\Domain\Cart\Repository\CartRepositoryInterface;
 use App\Infrastructure\Models\Cart as CartModel;
 
 class CartEloquentRepository extends RepositoryEloquentAbstract implements CartRepositoryInterface

@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Application\UseCases\User;
 
 use App\Application\DTO\User\CreateUserInputDTO;
-use App\Domain\Entities\UserEntity;
-use App\Domain\Exceptions\User\EmailAlreadyInUseException;
-use App\Domain\Exceptions\User\UserNotCreatedException;
-use App\Domain\Services\LoggerInterface;
-use App\Domain\Services\UserService;
+use App\Domain\Shared\Service\LoggerInterface;
+use App\Domain\User\Entity\UserEntity;
+use App\Domain\User\Exception\EmailAlreadyInUseException;
+use App\Domain\User\Exception\UserNotCreatedException;
+use App\Domain\User\Service\UserService;
 use Throwable;
 
 class CreateUserUseCase

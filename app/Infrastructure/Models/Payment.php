@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\Models;
 
-use App\Domain\Enums\PaymentMethodEnum;
-use App\Domain\Enums\PaymentStatusEnum;
+use App\Domain\Payment\Enum\PaymentMethodEnum;
+use App\Domain\Payment\Enum\PaymentStatusEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

@@ -6,7 +6,7 @@ namespace App\Infrastructure\Broker\Consumers\Kafka;
 
 use App\Application\DTO\Payment\PaymentStatusChangeInputDTO;
 use App\Application\UseCases\Payment\PaymentStatusChangeUseCase;
-use App\Domain\Services\LoggerInterface;
+use App\Domain\Shared\Service\LoggerInterface;
 use App\Infrastructure\Broker\TopicEnum;
 use Illuminate\Support\Arr;
 use Junges\Kafka\Contracts\ConsumerMessage;

@@ -6,7 +6,7 @@ namespace App\Infrastructure\Http\Controllers\User;
 
 use App\Application\DTO\User\GetUserInputDTO;
 use App\Application\UseCases\User\GetUserUseCase;
-use App\Domain\Enums\HttpCode;
+use App\Domain\Shared\Enum\HttpCode;
 use App\Infrastructure\Exceptions\HttpException;
 use App\Infrastructure\Helpers\BaseResponse;
 use App\Infrastructure\Http\Controllers\Controller;

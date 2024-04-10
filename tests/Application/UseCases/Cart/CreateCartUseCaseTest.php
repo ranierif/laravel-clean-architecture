@@ -8,11 +8,11 @@ use App\Application\DTO\Cart\CreateCartInputDTO;
 use App\Application\DTO\Cart\CreateCartOutputDTO;
 use App\Application\Helpers\UuidGeneratorInterface;
 use App\Application\UseCases\Cart\CreateCartUseCase;
-use App\Domain\Entities\CartEntity;
-use App\Domain\Enums\CartStatusEnum;
-use App\Domain\Exceptions\Cart\CartNotCreatedException;
-use App\Domain\Services\CartService;
-use App\Domain\Services\LoggerInterface;
+use App\Domain\Cart\Entity\CartEntity;
+use App\Domain\Cart\Enum\CartStatusEnum;
+use App\Domain\Cart\Exception\CartNotCreatedException;
+use App\Domain\Cart\Service\CartService;
+use App\Domain\Shared\Service\LoggerInterface;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
 

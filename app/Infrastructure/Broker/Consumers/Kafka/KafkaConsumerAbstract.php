@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Broker\Consumers\Kafka;
 
-use App\Domain\Services\LoggerInterface;
+use App\Domain\Shared\Service\LoggerInterface;
 use Illuminate\Console\Command;
 use Junges\Kafka\Contracts\ConsumerMessage;
 use Junges\Kafka\Contracts\MessageConsumer;

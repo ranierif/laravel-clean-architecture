@@ -6,7 +6,7 @@ namespace App\Infrastructure\Http\Controllers\Cart;
 
 use App\Application\DTO\Cart\GetCartInputDTO;
 use App\Application\UseCases\Cart\GetCartUseCase;
-use App\Domain\Enums\HttpCode;
+use App\Domain\Shared\Enum\HttpCode;
 use App\Infrastructure\Exceptions\HttpException;
 use App\Infrastructure\Helpers\BaseResponse;
 use App\Infrastructure\Http\Controllers\Controller;

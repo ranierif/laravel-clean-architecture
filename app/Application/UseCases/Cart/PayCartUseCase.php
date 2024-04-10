@@ -10,14 +10,14 @@ use App\Application\DTO\Cart\PayCartOutputDTO;
 use App\Application\DTO\Payment\PaymentCreatedMessageDTO;
 use App\Application\Helpers\CryptographyInterface;
 use App\Application\Helpers\UuidGeneratorInterface;
-use App\Domain\Entities\PaymentEntity;
-use App\Domain\Enums\PaymentStatusEnum;
-use App\Domain\Exceptions\Cart\CartNotFoundException;
-use App\Domain\Exceptions\Payment\PaymentNotCreatedException;
-use App\Domain\Exceptions\Payment\PaymentUnableToReceiveException;
-use App\Domain\Services\CartService;
-use App\Domain\Services\LoggerInterface;
-use App\Domain\Services\PaymentService;
+use App\Domain\Cart\Exception\CartNotFoundException;
+use App\Domain\Cart\Service\CartService;
+use App\Domain\Payment\Entity\PaymentEntity;
+use App\Domain\Payment\Enum\PaymentStatusEnum;
+use App\Domain\Payment\Exception\PaymentNotCreatedException;
+use App\Domain\Payment\Exception\PaymentUnableToReceiveException;
+use App\Domain\Payment\Service\PaymentService;
+use App\Domain\Shared\Service\LoggerInterface;
 use Throwable;
 
 class PayCartUseCase

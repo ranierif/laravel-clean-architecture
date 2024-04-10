@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\Providers;
 
-use App\Domain\Services\AuthServiceInterface;
-use App\Domain\Services\LoggerInterface;
+use App\Domain\Shared\Service\LoggerInterface;
+use App\Domain\User\Service\AuthServiceInterface;
 use App\Infrastructure\Services\AuthService\JwtAuthService;
 use App\Infrastructure\Services\Logger\LoggerService;
 use Illuminate\Support\ServiceProvider;

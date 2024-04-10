@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Models;
 
-use App\Domain\Enums\CartStatusEnum;
+use App\Domain\Cart\Enum\CartStatusEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

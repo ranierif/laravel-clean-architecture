@@ -6,7 +6,7 @@ namespace Tests\Application\UseCases\Auth;
 
 use App\Application\Exceptions\BusinessException;
 use App\Application\UseCases\Auth\CheckAuthenticationUseCase;
-use App\Domain\Services\AuthServiceInterface;
+use App\Domain\User\Service\AuthServiceInterface;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
 

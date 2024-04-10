@@ -2,7 +2,7 @@
 
 namespace Infrastructure\Http\Requests\Cart;
 
-use App\Domain\Enums\PaymentMethodEnum;
+use App\Domain\Payment\Enum\PaymentMethodEnum;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;

@@ -7,7 +7,7 @@ namespace App\Application\UseCases\Auth;
 use App\Application\DTO\Auth\LoginInputDTO;
 use App\Application\DTO\Auth\LoginOutputDTO;
 use App\Application\Exceptions\BusinessException;
-use App\Domain\Services\AuthServiceInterface;
+use App\Domain\User\Service\AuthServiceInterface;
 
 class LoginUseCase
 {

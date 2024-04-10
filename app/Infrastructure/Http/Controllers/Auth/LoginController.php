@@ -6,7 +6,7 @@ namespace App\Infrastructure\Http\Controllers\Auth;
 
 use App\Application\DTO\Auth\LoginInputDTO;
 use App\Application\UseCases\Auth\LoginUseCase;
-use App\Domain\Enums\HttpCode;
+use App\Domain\Shared\Enum\HttpCode;
 use App\Infrastructure\Exceptions\HttpException;
 use App\Infrastructure\Helpers\BaseResponse;
 use App\Infrastructure\Http\Controllers\Controller;

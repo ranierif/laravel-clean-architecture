@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Infrastructure\Repositories;
 
 use App\Application\Exceptions\BusinessException;
-use App\Domain\Entities\EntityInterface;
+use App\Domain\Shared\Entity\EntityInterface;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;

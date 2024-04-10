@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Application\UseCases\Auth;
 
-use App\Domain\Services\AuthServiceInterface;
+use App\Domain\User\Service\AuthServiceInterface;
 use Throwable;
 
 class LogoutUseCase

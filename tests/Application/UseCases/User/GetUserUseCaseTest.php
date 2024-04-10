@@ -7,10 +7,10 @@ namespace Tests\Application\UseCases\User;
 use App\Application\DTO\User\GetUserInputDTO;
 use App\Application\DTO\User\GetUserOutputDTO;
 use App\Application\UseCases\User\GetUserUseCase;
-use App\Domain\Entities\UserEntity;
-use App\Domain\Exceptions\User\UserNotFoundException;
-use App\Domain\Services\LoggerInterface;
-use App\Domain\Services\UserService;
+use App\Domain\Shared\Service\LoggerInterface;
+use App\Domain\User\Entity\UserEntity;
+use App\Domain\User\Exception\UserNotFoundException;
+use App\Domain\User\Service\UserService;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
 

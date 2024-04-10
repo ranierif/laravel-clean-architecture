@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Application\UseCases\Auth;
 
 use App\Application\Exceptions\BusinessException;
-use App\Domain\Services\AuthServiceInterface;
+use App\Domain\User\Service\AuthServiceInterface;
 
 class CheckAuthenticationUseCase
 {

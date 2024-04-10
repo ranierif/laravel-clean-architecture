@@ -2,9 +2,9 @@
 
 namespace App\Infrastructure\Providers;
 
-use App\Domain\Repositories\CartRepositoryInterface;
-use App\Domain\Repositories\PaymentRepositoryInterface;
-use App\Domain\Repositories\UserRepositoryInterface;
+use App\Domain\Cart\Repository\CartRepositoryInterface;
+use App\Domain\Payment\Repository\PaymentRepositoryInterface;
+use App\Domain\User\Repository\UserRepositoryInterface;
 use App\Infrastructure\Repositories\CartEloquentRepository;
 use App\Infrastructure\Repositories\PaymentEloquentRepository;
 use App\Infrastructure\Repositories\UserEloquentRepository;

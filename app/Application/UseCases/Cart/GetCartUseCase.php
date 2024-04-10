@@ -6,9 +6,9 @@ namespace App\Application\UseCases\Cart;
 
 use App\Application\DTO\Cart\GetCartInputDTO;
 use App\Application\DTO\Cart\GetCartOutputDTO;
-use App\Domain\Exceptions\Cart\CartNotFoundException;
-use App\Domain\Services\CartService;
-use App\Domain\Services\LoggerInterface;
+use App\Domain\Cart\Exception\CartNotFoundException;
+use App\Domain\Cart\Service\CartService;
+use App\Domain\Shared\Service\LoggerInterface;
 use Throwable;
 
 class GetCartUseCase

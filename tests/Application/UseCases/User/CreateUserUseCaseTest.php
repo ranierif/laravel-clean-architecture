@@ -6,11 +6,11 @@ namespace Tests\Application\UseCases\User;
 
 use App\Application\DTO\User\CreateUserInputDTO;
 use App\Application\UseCases\User\CreateUserUseCase;
-use App\Domain\Entities\UserEntity;
-use App\Domain\Exceptions\User\EmailAlreadyInUseException;
-use App\Domain\Exceptions\User\UserNotCreatedException;
-use App\Domain\Services\LoggerInterface;
-use App\Domain\Services\UserService;
+use App\Domain\Shared\Service\LoggerInterface;
+use App\Domain\User\Entity\UserEntity;
+use App\Domain\User\Exception\EmailAlreadyInUseException;
+use App\Domain\User\Exception\UserNotCreatedException;
+use App\Domain\User\Service\UserService;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
 

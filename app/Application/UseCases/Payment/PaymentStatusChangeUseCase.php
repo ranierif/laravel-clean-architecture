@@ -3,11 +3,11 @@
 namespace App\Application\UseCases\Payment;
 
 use App\Application\DTO\Payment\PaymentStatusChangeInputDTO;
-use App\Domain\Enums\PaymentStatusEnum;
-use App\Domain\Exceptions\Payment\PaymentNotFoundException;
-use App\Domain\Exceptions\Payment\PaymentNotUpdatedException;
-use App\Domain\Services\LoggerInterface;
-use App\Domain\Services\PaymentService;
+use App\Domain\Payment\Enum\PaymentStatusEnum;
+use App\Domain\Payment\Exception\PaymentNotFoundException;
+use App\Domain\Payment\Exception\PaymentNotUpdatedException;
+use App\Domain\Payment\Service\PaymentService;
+use App\Domain\Shared\Service\LoggerInterface;
 use Throwable;
 
 class PaymentStatusChangeUseCase

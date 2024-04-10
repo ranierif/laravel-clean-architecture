@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Exceptions;
 
-use App\Domain\Enums\HttpCode;
+use App\Domain\Shared\Enum\HttpCode;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;

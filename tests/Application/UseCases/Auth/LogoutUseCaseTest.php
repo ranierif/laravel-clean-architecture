@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Application\UseCases\Auth;
 
 use App\Application\UseCases\Auth\LogoutUseCase;
-use App\Domain\Services\AuthServiceInterface;
+use App\Domain\User\Service\AuthServiceInterface;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
 
